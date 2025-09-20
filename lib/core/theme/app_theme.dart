@@ -57,7 +57,7 @@ class AppTheme {
           backgroundColor: AppColors.primeryColor,
           foregroundColor: Colors.white,
           elevation: 0,
-          shape: BeveledRectangleBorder(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
         ),
@@ -151,7 +151,7 @@ class AppTheme {
           backgroundColor: AppColors.primeryColor,
           foregroundColor: Colors.white,
           elevation: 0,
-          shape: BeveledRectangleBorder(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
         ),
