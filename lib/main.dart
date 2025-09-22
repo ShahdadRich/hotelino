@@ -1,6 +1,10 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:hotelino/core/theme/app_theme.dart';
 import 'package:hotelino/core/theme/theme_provider.dart';
+import 'package:hotelino/features/onboarding/data/repositories/onboarding_repository.dart';
+import 'package:hotelino/features/onboarding/presentation/onboarding_provider.dart';
 import 'package:hotelino/routes/app_route.dart';
 import 'package:provider/provider.dart';
 
@@ -13,6 +17,9 @@ void main() {
           create: (_) => ThemeProvider(
             WidgetsBinding.instance.platformDispatcher.platformBrightness,
           ),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => OnboardingProvider(OnboardingRepository()),
         ),
       ],
       child: MyApp(),
