@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class AppConstans {
   static const String hotelsData = "assets/data/hotels.json";

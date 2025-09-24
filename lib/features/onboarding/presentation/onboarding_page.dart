@@ -73,8 +73,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
               transitionBuilder: (child, animation) {
                 return SizeTransition(
                   sizeFactor: animation,
-                  child: child,
                   axisAlignment: -1,
+                  child: child,
                 );
               },
               child: onboardingProvider.currentPage == totalPages - 1
