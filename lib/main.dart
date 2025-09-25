@@ -13,6 +13,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   final widghetBinding = WidgetsFlutterBinding.ensureInitialized();
+  final hoteRepository = HotelRepository(jsonDataServis: JsonDataServis());
   runApp(
     MultiProvider(
       providers: [
@@ -24,10 +25,7 @@ void main() {
         ChangeNotifierProvider(
           create: (_) => OnboardingProvider(OnboardingRepository()),
         ),
-        ChangeNotifierProvider(
-          create: (_) =>
-              HomeProvider(HotelRepository(jsonDataServis: JsonDataServis())),
-        ),
+        ChangeNotifierProvider(create: (_) => HomeProvider(hoteRepository)),
       ],
       child: MyApp(),
     ),

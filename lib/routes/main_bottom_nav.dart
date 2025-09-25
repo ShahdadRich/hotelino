@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hotelino/core/constans/constans.dart';
+import 'package:hotelino/features/home/presentation/homePage.dart';
 import 'package:hotelino/routes/test_pages.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
@@ -20,7 +21,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
   }
 
   List<Widget> _builderNav() {
-    return [HomePage(), FavoritePage(), BookingPage(), ProfilePage()];
+    return [Homepage(), FavoritePage(), BookingPage(), ProfilePage()];
   }
 
   List<PersistentBottomNavBarItem> _bottomItem() {
