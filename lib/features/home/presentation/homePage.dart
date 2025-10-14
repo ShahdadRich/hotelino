@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hotelino/features/home/presentation/provider/home_provider.dart';
 import 'package:hotelino/features/home/presentation/widgets/ad_banner.dart';
 import 'package:hotelino/features/home/presentation/widgets/home_appbar.dart';
+import 'package:hotelino/features/home/presentation/widgets/hotel_list_section.dart';
 import 'package:hotelino/features/home/presentation/widgets/search_bar.dart';
+import 'package:provider/provider.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -18,6 +21,15 @@ class Homepage extends StatelessWidget {
             SearchBarWidget(),
             SizedBox(height: 16),
             AdBanner(),
+            Consumer<HomeProvider>(
+              builder: (context, homeProvider, child) {
+                return HotelListSection(
+                  titel: 'محبوب ترین هتل ها',
+                  hotels: homeProvider.getPopularHotels(),
+                  oneSeeAllPressed: () {},
+                );
+              },
+            ),
           ],
         ),
       ),
