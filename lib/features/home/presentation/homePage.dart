@@ -30,6 +30,16 @@ class Homepage extends StatelessWidget {
                 );
               },
             ),
+            // -----------------pishnehad vizhe roz-------
+            Consumer<HomeProvider>(
+              builder: (context, homeProvider, child) {
+                return HotelListSection(
+                  titel: 'پیشنهاد ویژه روز',
+                  hotels: homeProvider.getSpecialOffersHotels(),
+                  oneSeeAllPressed: () {},
+                );
+              },
+            ),
           ],
         ),
       ),

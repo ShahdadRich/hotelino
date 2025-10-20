@@ -7,8 +7,8 @@ import 'package:hotelino/features/home/presentation/widgets/animated_favorite_bo
 import 'package:provider/provider.dart';
 
 class HotelCard extends StatelessWidget {
-  Hotel hotel;
-  HotelCard({super.key, required this.hotel});
+  final Hotel hotel;
+  const HotelCard({super.key, required this.hotel});
 
   @override
   Widget build(BuildContext context) {
