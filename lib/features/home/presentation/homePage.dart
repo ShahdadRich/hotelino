@@ -4,6 +4,7 @@ import 'package:hotelino/features/home/presentation/widgets/ad_banner.dart';
 import 'package:hotelino/features/home/presentation/widgets/home_appbar.dart';
 import 'package:hotelino/features/home/presentation/widgets/hotel_list_section.dart';
 import 'package:hotelino/features/home/presentation/widgets/search_bar.dart';
+import 'package:hotelino/features/home/presentation/widgets/story_carousel.dart';
 import 'package:provider/provider.dart';
 
 class Homepage extends StatelessWidget {
@@ -30,13 +31,23 @@ class Homepage extends StatelessWidget {
                 );
               },
             ),
-            // -----------------pishnehad vizhe roz-------
+            // -----------------pishnehad vizhe roz------------------------------
             Consumer<HomeProvider>(
               builder: (context, homeProvider, child) {
                 return HotelListSection(
                   titel: 'پیشنهاد ویژه روز',
                   hotels: homeProvider.getSpecialOffersHotels(),
                   oneSeeAllPressed: () {},
+                );
+              },
+            ),
+            SizedBox(height: 16),
+            // --------------------------Story carousel--------------------------
+            Consumer<HomeProvider>(
+              builder: (context, homeProvider, child) {
+                return StoryCarousel(
+                  image: homeProvider.getStoryImage(),
+                  titel: homeProvider.storyTitel,
                 );
               },
             ),
