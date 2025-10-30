@@ -22,12 +22,12 @@ class _StoryCarouselState extends State<StoryCarousel> {
   @override
   void initState() {
     super.initState();
-    _startAutoSlider();
+    _startAutoSlide();
   }
 
-  void _startAutoSlider() {
-    _timer = Timer.periodic(Duration(seconds: 2), (timer) {
-      if (_currentIndex < widget.image.length) {
+  void _startAutoSlide() {
+    _timer = Timer.periodic(const Duration(seconds: 5), (timer) {
+      if (_currentIndex < widget.image.length - 1) {
         _currentIndex++;
       } else {
         _currentIndex = 0;

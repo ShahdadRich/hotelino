@@ -21,7 +21,7 @@ class Homepage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             SizedBox(height: 16),
-            SearchBarWidget(),
+            SearchBarWidget(hintText: 'جستجوی هتل ها...'),
             SizedBox(height: 16),
             AdBanner(),
             Consumer<HomeProvider>(

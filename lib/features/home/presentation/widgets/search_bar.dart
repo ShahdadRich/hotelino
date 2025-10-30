@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SearchBarWidget extends StatelessWidget {
-  const SearchBarWidget({super.key});
+  final String hintText;
+  const SearchBarWidget({super.key, required this.hintText});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class SearchBarWidget extends StatelessWidget {
               child: TextField(
                 textDirection: TextDirection.rtl,
                 decoration: InputDecoration(
-                  hintText: "جستجوی هتل ها...",
+                  hintText: hintText,
                   hintTextDirection: TextDirection.rtl,
                   filled: false,
                   focusedBorder: InputBorder.none,
