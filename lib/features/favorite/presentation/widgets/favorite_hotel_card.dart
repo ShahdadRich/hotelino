@@ -3,6 +3,7 @@ import 'package:hotelino/core/utils/network.dart';
 import 'package:hotelino/core/utils/price_formatter.dart';
 import 'package:hotelino/features/home/data/models/hotel.dart';
 
+// ignore: must_be_immutable
 class FavoriteHotelCard extends StatelessWidget {
   final Hotel hotel;
   Function(String) onRemovedHotelCard;
