@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotelino/core/theme/app_theme.dart';
 import 'package:hotelino/core/theme/theme_provider.dart';
+import 'package:hotelino/features/booking/presentation/booking_provider.dart';
 import 'package:hotelino/features/home/data/repositories/hotel_repository.dart';
 import 'package:hotelino/features/home/data/repositories/profile_repository.dart';
 import 'package:hotelino/features/home/presentation/provider/favorite_item_proovider.dart';
@@ -36,6 +37,7 @@ void main() {
         ChangeNotifierProvider(
           create: (_) => FavoriteItemProovider(hoteRepository),
         ),
+        ChangeNotifierProvider(create: (_) => BookingProvider()),
       ],
       child: MyApp(),
     ),
