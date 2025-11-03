@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hotelino/features/home/presentation/provider/home_provider.dart';
 import 'package:hotelino/features/home/presentation/widgets/ad_banner.dart';
 import 'package:hotelino/features/home/presentation/widgets/home_appbar.dart';
-import 'package:hotelino/features/home/presentation/widgets/hotel_card_vertical.dart';
 import 'package:hotelino/features/home/presentation/widgets/hotel_list_section.dart';
 import 'package:hotelino/features/home/presentation/widgets/hotel_vertical_list.dart';
 import 'package:hotelino/features/home/presentation/widgets/search_bar.dart';
