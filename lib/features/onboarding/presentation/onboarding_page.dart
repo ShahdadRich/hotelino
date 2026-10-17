@@ -37,15 +37,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
               },
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           buildPageIdicator(
             onboardingProvider.currentPage,
             totalPages,
             context,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -66,10 +66,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
               ],
             ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           if (totalPages > 1) ...[
             AnimatedSwitcher(
-              duration: Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 300),
               transitionBuilder: (child, animation) {
                 return SizeTransition(
                   sizeFactor: animation,
@@ -79,7 +79,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               },
               child: onboardingProvider.currentPage == totalPages - 1
                   ? Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 10,
                       ),
@@ -93,7 +93,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                               AppRoute.home,
                             );
                           },
-                          child: Text('شروع رزرو هتل ها'),
+                          child: const Text('شروع رزرو هتل ها'),
                         ),
                       ),
                     )
@@ -101,7 +101,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
             ),
           ],
 
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
         ],
       ),
     );
@@ -115,7 +115,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
     if (onboardingProvider.currentPage <
         onboardingProvider.onboardingData.length - 1) {
       _pageController.nextPage(
-        duration: Duration(milliseconds: 400),
+        duration: const Duration(milliseconds: 400),
         curve: Curves.ease,
       );
     }
@@ -128,7 +128,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
     );
     if (onboardingProvider.currentPage > 0) {
       _pageController.previousPage(
-        duration: Duration(milliseconds: 400),
+        duration: const Duration(milliseconds: 400),
         curve: Curves.easeInExpo,
       );
     }
@@ -146,8 +146,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
       children: List.generate(
         totalPage,
         (index) => AnimatedContainer(
-          duration: Duration(milliseconds: 300),
-          margin: EdgeInsets.symmetric(horizontal: 5),
+          duration: const Duration(milliseconds: 300),
+          margin: const EdgeInsets.symmetric(horizontal: 5),
           width: currentIndex == index ? 12 : 8,
           height: currentIndex == index ? 12 : 8,
           decoration: BoxDecoration(

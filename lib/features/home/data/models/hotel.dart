@@ -1,4 +1,4 @@
-import 'package:hotelino/features/home/data/models/bedType.dart';
+import 'package:hotelino/features/home/data/models/bed_type.dart';
 import 'package:hotelino/features/home/data/models/location.dart';
 
 class Hotel {

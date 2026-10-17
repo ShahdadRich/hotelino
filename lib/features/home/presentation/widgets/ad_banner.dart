@@ -6,8 +6,8 @@ class AdBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 16),
-      padding: EdgeInsets.symmetric(horizontal: 8),
+      margin: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         color: Theme.of(context).colorScheme.primaryFixed,
@@ -30,7 +30,7 @@ class AdBanner extends StatelessWidget {
                   ),
                   textAlign: TextAlign.right,
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Text(
                   textDirection: TextDirection.rtl,
                   textAlign: TextAlign.right,
@@ -39,7 +39,7 @@ class AdBanner extends StatelessWidget {
                     context,
                   ).textTheme.labelLarge?.copyWith(color: Colors.white60),
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
@@ -49,9 +49,9 @@ class AdBanner extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  child: Text('همه هتل ها'),
+                  child: const Text('همه هتل ها'),
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
               ],
             ),
           ),

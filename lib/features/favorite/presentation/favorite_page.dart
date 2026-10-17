@@ -23,18 +23,18 @@ class FavoritePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 16),
-            SearchBarWidget(hintText: 'جستجو هتل های مورد علاقه'),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
+            const SearchBarWidget(hintText: 'جستجو هتل های مورد علاقه'),
+            const SizedBox(height: 16),
             Consumer<FavoriteItemProovider>(
               builder: (context, favoriteItem, child) {
                 return ListView.builder(
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: favoriteItem.favoritHotelsId.length,
                   itemBuilder: (context, index) {
                     return Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         vertical: 6,
                         horizontal: 16,
                       ),
@@ -57,7 +57,7 @@ class FavoritePage extends StatelessWidget {
                     hotels: profileProvider.recentlyViweHotels,
                   );
                 } else {
-                  return SizedBox();
+                  return const SizedBox();
                 }
               },
             ),

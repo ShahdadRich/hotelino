@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hotelino/core/constans/constans.dart';
 import 'package:hotelino/features/booking/presentation/booking_page.dart';
 import 'package:hotelino/features/favorite/presentation/favorite_page.dart';
-import 'package:hotelino/features/home/presentation/homePage.dart';
+import 'package:hotelino/features/home/presentation/home_page.dart';
 import 'package:hotelino/routes/test_pages.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
@@ -23,7 +23,12 @@ class _MainBottomNavState extends State<MainBottomNav> {
   }
 
   List<Widget> _builderNav() {
-    return [Homepage(), FavoritePage(), BookingPage(), ProfilePage()];
+    return [
+      const Homepage(),
+      const FavoritePage(),
+      const BookingPage(),
+      const ProfilePage(),
+    ];
   }
 
   List<PersistentBottomNavBarItem> _bottomItem() {
@@ -33,7 +38,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
           'assets/images/nav_home.svg',
           width: 20,
           height: 20,
-          colorFilter: ColorFilter.mode(
+          colorFilter: const ColorFilter.mode(
             AppColors.lightInputFill,
             BlendMode.srcIn,
           ),
@@ -43,7 +48,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
           'assets/images/nav_home.svg',
           width: 20,
           height: 20,
-          colorFilter: ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+          colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
         ),
         title: 'home',
         activeColorSecondary: AppColors.darkText,
@@ -53,7 +58,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
           'assets/images/nav_favorite.svg',
           width: 20,
           height: 20,
-          colorFilter: ColorFilter.mode(
+          colorFilter: const ColorFilter.mode(
             AppColors.lightInputFill,
             BlendMode.srcIn,
           ),
@@ -63,7 +68,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
           'assets/images/nav_favorite.svg',
           width: 20,
           height: 20,
-          colorFilter: ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+          colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
         ),
         title: 'favorite',
         activeColorSecondary: AppColors.darkText,
@@ -73,7 +78,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
           'assets/images/nav_booking.svg',
           width: 20,
           height: 20,
-          colorFilter: ColorFilter.mode(
+          colorFilter: const ColorFilter.mode(
             AppColors.lightInputFill,
             BlendMode.srcIn,
           ),
@@ -83,7 +88,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
           'assets/images/nav_booking.svg',
           width: 20,
           height: 20,
-          colorFilter: ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+          colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
         ),
         title: 'booking',
         activeColorSecondary: AppColors.darkText,
@@ -93,7 +98,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
           'assets/images/nav_profile.svg',
           width: 20,
           height: 20,
-          colorFilter: ColorFilter.mode(
+          colorFilter: const ColorFilter.mode(
             AppColors.lightInputFill,
             BlendMode.srcIn,
           ),
@@ -103,7 +108,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
           'assets/images/nav_profile.svg',
           width: 20,
           height: 20,
-          colorFilter: ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+          colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
         ),
         title: 'profile',
         activeColorSecondary: AppColors.darkText,
@@ -123,7 +128,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
       backgroundColor: Theme.of(context).colorScheme.surface,
       navBarStyle: NavBarStyle.style7,
       confineToSafeArea: true,
-      animationSettings: NavBarAnimationSettings(
+      animationSettings: const NavBarAnimationSettings(
         navBarItemAnimation: ItemAnimationSettings(
           duration: Duration(milliseconds: 300),
           curve: Curves.easeIn,

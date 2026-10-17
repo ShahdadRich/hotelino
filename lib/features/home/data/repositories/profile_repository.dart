@@ -2,7 +2,7 @@ import 'package:hotelino/features/home/data/models/profile.dart';
 
 class ProfileRepository {
   Future<Profile> fetchprofile() async {
-    await Future.delayed(Duration(milliseconds: 100));
+    await Future.delayed(const Duration(milliseconds: 100));
     return Profile(
       id: "7954862145",
       name: "کیان خاکی",

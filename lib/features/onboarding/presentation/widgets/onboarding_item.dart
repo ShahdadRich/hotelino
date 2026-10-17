@@ -18,15 +18,15 @@ class OnboardingItem extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(image, height: 290),
-        SizedBox(height: 30),
+        const SizedBox(height: 30),
         Text(
           title,
           textAlign: TextAlign.center,
           style: theme.textTheme.headlineMedium,
         ),
-        SizedBox(height: 30),
+        const SizedBox(height: 30),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(
             description,
             textAlign: TextAlign.center,

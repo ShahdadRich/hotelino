@@ -33,7 +33,7 @@ class ProfileProvider extends ChangeNotifier {
       _hotel.where((hotel) => _recentlyViweHotels.contains(hotel.id)).toList();
 
   void addRecentlyViweHotels(String hotelId) {
-    if (!recentlyViweHotels.contains(hotelId)) {
+    if (!_recentlyViweHotels.contains(hotelId)) {
       _recentlyViweHotels.add(hotelId);
       notifyListeners();
     } else {

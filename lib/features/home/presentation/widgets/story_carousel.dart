@@ -69,7 +69,7 @@ class _StoryCarouselState extends State<StoryCarousel> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       child: Stack(
         children: [
           CarouselSlider(
@@ -116,13 +116,13 @@ class _StoryCarouselState extends State<StoryCarousel> {
             left: 0,
             right: 0,
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Row(
                 children: List.generate(widget.image.length, (index) {
                   return Expanded(
                     child: AnimatedContainer(
-                      duration: Duration(milliseconds: 500),
-                      margin: EdgeInsets.symmetric(horizontal: 2),
+                      duration: const Duration(milliseconds: 500),
+                      margin: const EdgeInsets.symmetric(horizontal: 2),
                       height: 4,
                       decoration: BoxDecoration(
                         color: _currentIndex >= index
@@ -142,7 +142,7 @@ class _StoryCarouselState extends State<StoryCarousel> {
             right: 16,
             child: Text(
               widget.titel[_currentIndex],
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -157,7 +157,7 @@ class _StoryCarouselState extends State<StoryCarousel> {
               onTap: _nextImage,
               child: CircleAvatar(
                 backgroundColor: Colors.white.withValues(alpha: 0.6),
-                child: Icon(Icons.chevron_right, color: Colors.black),
+                child: const Icon(Icons.chevron_right, color: Colors.black),
               ),
             ),
           ),
@@ -170,7 +170,7 @@ class _StoryCarouselState extends State<StoryCarousel> {
               onTap: _prevImage,
               child: CircleAvatar(
                 backgroundColor: Colors.white.withValues(alpha: 0.6),
-                child: Icon(Icons.chevron_left, color: Colors.black),
+                child: const Icon(Icons.chevron_left, color: Colors.black),
               ),
             ),
           ),

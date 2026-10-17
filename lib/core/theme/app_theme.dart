@@ -8,7 +8,7 @@ class AppTheme {
       brightness: Brightness.light,
       fontFamily: 'sahel',
       colorSchemeSeed: AppColors.primeryColor,
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         elevation: 0,
         titleTextStyle: TextStyle(
           fontSize: 16,
@@ -16,7 +16,7 @@ class AppTheme {
           fontWeight: FontWeight.w400,
         ),
       ),
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         // onboarding screen
         displayLarge: TextStyle(
           fontSize: 24,
@@ -64,21 +64,33 @@ class AppTheme {
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+        contentPadding: const EdgeInsets.symmetric(
+          vertical: 16,
+          horizontal: 12,
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColors.lightBorder, width: 1.5),
+          borderSide: const BorderSide(
+            color: AppColors.lightBorder,
+            width: 1.5,
+          ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColors.lightBorder, width: 1.5),
+          borderSide: const BorderSide(
+            color: AppColors.lightBorder,
+            width: 1.5,
+          ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColors.lightFocusBorder, width: 1.5),
+          borderSide: const BorderSide(
+            color: AppColors.lightFocusBorder,
+            width: 1.5,
+          ),
         ),
-        hintStyle: TextStyle(color: AppColors.lightHint, fontSize: 14),
-        labelStyle: TextStyle(
+        hintStyle: const TextStyle(color: AppColors.lightHint, fontSize: 14),
+        labelStyle: const TextStyle(
           color: AppColors.lightText,
           fontWeight: FontWeight.bold,
         ),
@@ -91,6 +103,9 @@ class AppTheme {
         primaryFixed: AppColors.primeryColor,
         surfaceContainerLow: Colors.grey[200],
       ),
+      inputDecorationTheme: baseLight.inputDecorationTheme.copyWith(
+        fillColor: baseLight.colorScheme.surface,
+      ),
     );
   }
 
@@ -102,7 +117,7 @@ class AppTheme {
       brightness: Brightness.dark,
       fontFamily: 'sahel',
       colorSchemeSeed: AppColors.primeryColor,
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         elevation: 0,
         titleTextStyle: TextStyle(
           fontSize: 16,
@@ -110,7 +125,7 @@ class AppTheme {
           fontWeight: FontWeight.w400,
         ),
       ),
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         // onboarding screen
         displayLarge: TextStyle(
           fontSize: 24,
@@ -159,21 +174,27 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.darkInputFill,
-        contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+        contentPadding: const EdgeInsets.symmetric(
+          vertical: 16,
+          horizontal: 12,
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColors.darkBorder, width: 1.5),
+          borderSide: const BorderSide(color: AppColors.darkBorder, width: 1.5),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColors.darkBorder, width: 1.5),
+          borderSide: const BorderSide(color: AppColors.darkBorder, width: 1.5),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColors.darkFocusBorder, width: 1.5),
+          borderSide: const BorderSide(
+            color: AppColors.darkFocusBorder,
+            width: 1.5,
+          ),
         ),
-        hintStyle: TextStyle(color: AppColors.darkHint, fontSize: 14),
-        labelStyle: TextStyle(
+        hintStyle: const TextStyle(color: AppColors.darkHint, fontSize: 14),
+        labelStyle: const TextStyle(
           color: AppColors.darkText,
           fontWeight: FontWeight.bold,
         ),
@@ -184,6 +205,9 @@ class AppTheme {
       colorScheme: baseDark.colorScheme.copyWith(
         outline: Colors.grey[500],
         primaryFixed: AppColors.primeryColor,
+      ),
+      inputDecorationTheme: baseDark.inputDecorationTheme.copyWith(
+        fillColor: baseDark.colorScheme.surface,
       ),
     );
   }

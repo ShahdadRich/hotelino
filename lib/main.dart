@@ -39,7 +39,7 @@ void main() {
         ),
         ChangeNotifierProvider(create: (_) => BookingProvider()),
       ],
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
@@ -82,9 +82,9 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       builder: (context, themeModeChainge, child) {
         return MaterialApp(
           title: 'Hotelino',
-          locale: Locale('fa', 'IR'),
-          supportedLocales: [Locale('fa', 'IR'), Locale('en', 'US')],
-          localizationsDelegates: [
+          locale: const Locale('fa', 'IR'),
+          supportedLocales: const [Locale('fa', 'IR'), Locale('en', 'US')],
+          localizationsDelegates: const [
             PersianMaterialLocalizations.delegate,
             PersianCupertinoLocalizations.delegate,
           ],

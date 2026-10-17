@@ -14,15 +14,15 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: HomeAppbar(),
+      appBar: const HomeAppbar(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            SizedBox(height: 16),
-            SearchBarWidget(hintText: 'جستجوی هتل ها...'),
-            SizedBox(height: 16),
-            AdBanner(),
+            const SizedBox(height: 16),
+            const SearchBarWidget(hintText: 'جستجوی هتل ها...'),
+            const SizedBox(height: 16),
+            const AdBanner(),
             Consumer<HomeProvider>(
               builder: (context, homeProvider, child) {
                 return HotelListSection(
@@ -42,7 +42,7 @@ class Homepage extends StatelessWidget {
                 );
               },
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             // --------------------------Story carousel--------------------------
             Consumer<HomeProvider>(
               builder: (context, homeProvider, child) {
@@ -52,7 +52,7 @@ class Homepage extends StatelessWidget {
                 );
               },
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             // -----------------------------Hotel list vertical-------------------
             Consumer<HomeProvider>(
               builder: (context, homeprovider, child) {

@@ -18,7 +18,7 @@ class OnboardingButtom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedSwitcher(
-      duration: Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 400),
       transitionBuilder: (child, animation) {
         return FadeTransition(opacity: animation, child: child);
       },
@@ -35,11 +35,11 @@ class OnboardingButtom extends StatelessWidget {
                 elevation: 0,
                 onPressed: onPreesed,
                 backgroundColor: backgroundColor,
-                shape: CircleBorder(),
+                shape: const CircleBorder(),
                 child: Icon(icon, color: iconColor),
               ),
             )
-          : SizedBox(),
+          : const SizedBox(),
     );
   }
 }

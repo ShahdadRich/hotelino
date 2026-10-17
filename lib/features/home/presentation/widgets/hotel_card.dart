@@ -19,14 +19,14 @@ class HotelCard extends StatelessWidget {
       width: 280,
       child: Card(
         elevation: 0,
-        margin: EdgeInsets.all(0),
+        margin: const EdgeInsets.all(0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Stack(
               children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(16),
                     topRight: Radius.circular(16),
                   ),
@@ -53,70 +53,70 @@ class HotelCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Row(
                     children: [
-                      SizedBox(width: 8),
-                      Icon(Icons.star, color: Colors.amber, size: 20),
-                      SizedBox(width: 4),
+                      const SizedBox(width: 8),
+                      const Icon(Icons.star, color: Colors.amber, size: 20),
+                      const SizedBox(width: 4),
                       Text(
                         '${hotel.rating} (${formatPrice(hotel.reviewCount)})',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Text(
                         hotel.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(width: 8),
+                      const SizedBox(width: 8),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      SizedBox(width: 8),
+                      const SizedBox(width: 8),
                       Text(
                         '${hotel.city} , ${hotel.country}',
-                        style: TextStyle(color: Colors.grey),
+                        style: const TextStyle(color: Colors.grey),
                       ),
-                      SizedBox(width: 4),
+                      const SizedBox(width: 4),
                       Icon(
                         Icons.location_on,
                         color: Theme.of(context).colorScheme.primary,
                         size: 18,
                       ),
-                      SizedBox(width: 8),
+                      const SizedBox(width: 8),
                     ],
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Padding(
                     padding: const EdgeInsets.only(right: 8),
                     child: Text(
                       "از ${formatPrice(hotel.pricePerNight)} / شب",
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Padding(
                     padding: const EdgeInsets.only(right: 8, left: 8),
                     child: SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           'مشاهده و انتخاب اتاق',
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                 ],
               ),
             ),

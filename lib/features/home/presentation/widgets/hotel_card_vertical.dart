@@ -35,29 +35,35 @@ class HotelCardVertical extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Padding(
-            padding: EdgeInsets.only(bottom: 12, left: 12),
+            padding: const EdgeInsets.only(bottom: 12, left: 12),
             child: ElevatedButton(
               onPressed: () {},
-              child: Text('رزو هتل', style: TextStyle(color: Colors.white)),
+              child: const Text(
+                'رزو هتل',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ),
           Expanded(
             child: Padding(
-              padding: EdgeInsets.all(12),
+              padding: const EdgeInsets.all(12),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     hotel.name,
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text('${hotel.city} , ${hotel.country}'),
-                      SizedBox(width: 5),
+                      const SizedBox(width: 5),
                       Icon(
                         Icons.location_on,
                         color: Theme.of(context).colorScheme.primary,
@@ -65,12 +71,12 @@ class HotelCardVertical extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text('${hotel.bedType.type} , ${hotel.bedType.count}'),
-                      SizedBox(width: 5),
+                      const SizedBox(width: 5),
                       Icon(
                         Icons.bed_outlined,
                         color: Theme.of(context).colorScheme.primary,
@@ -78,15 +84,15 @@ class HotelCardVertical extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(' از ${formatPrice(hotel.pricePerNight)} / شب '),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                 ],
               ),
             ),
           ),
           ClipRRect(
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topRight: Radius.circular(16),
               bottomRight: Radius.circular(16),
             ),
